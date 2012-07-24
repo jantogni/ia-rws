@@ -1,0 +1,10 @@
+\beamer@endinputifotherversion {3.06pt}
+\select@language {spanish}
+\beamer@sectionintoc {1}{Introducci\IeC {\'o}n}{3}{0}{1}
+\beamer@sectionintoc {2}{Implementaciones}{4}{0}{2}
+\beamer@subsectionintoc {2}{1}{Estructura de datos}{4}{0}{2}
+\beamer@subsectionintoc {2}{2}{Foward checking + Graph BackJumping}{6}{0}{2}
+\beamer@subsectionintoc {2}{3}{Greedy + Hill Climbing}{8}{0}{2}
+\beamer@subsectionintoc {2}{4}{Greedy}{8}{0}{2}
+\beamer@sectionintoc {3}{Resultads}{12}{0}{3}
+\beamer@sectionintoc {4}{Conclusiones}{13}{0}{4}

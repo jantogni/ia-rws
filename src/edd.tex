@@ -1,0 +1,28 @@
+\frame{
+\frametitle{Estructura de datos}
+Los datos se obtuvieron de los input (Example*.txt), archivos que contenían los datos necesarios para poder definir el 
+problema. Los datos son:
+
+\begin{itemize}
+        \item $w$: largo de la planificación. Todos los input tenían un $w=7$, lo que corresponde a planificar de lunes 
+		a domingo.
+        \item $n$: número de empleados.
+        \item $m$: número de turnos más día libre. En la mayoría de los input $m$ valía 4 (3 turnos + 1 día libre).
+        \item $A$: vector de largo m donde se indican los diferentes tipos de turnos. En la mayoría de los casos v 
+		contenía $D,A,N,-$.
+\end{itemize}
+}
+
+\frame{
+\begin{itemize}
+        \item $R$: matriz de requerimientos de turnos por día, ya que hay $w$ días, y $m-1$ día son turnos, la matriz 
+		tiene dimensión $R_{(m-1)xw}$
+        \item $MAXS$: Vector de largo m donde por cada turno se indica el máximo de turnos o días libres consecutivos 
+		permitidos.
+        \item $MINS$: Vector de largo m donde por cada turno se indica el mínimo de turnos o días libres consecutivos 
+		permitidos.
+        \item $MAXW$: número máximo de días consecutivos trabajados.
+        \item $MINW$: número mínimo de días consecutivos trabajados.
+        \item $C2$: matriz donde cada fila representa a la secuencia de turnos no permitida.
+\end{itemize}
+}

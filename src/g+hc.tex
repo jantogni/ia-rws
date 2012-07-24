@@ -1,0 +1,64 @@
+\frame{
+\frametitle{Greedy}
+\subsection{Greedy}
+Para poder definir un algoritmo Greedy correctamente es necesario especificar:
+\begin{itemize}
+        \item Representación: una matriz de dimensión $NxW$ elementos, donde cada elemento i,j corresponde a la 
+		asignación de un turno al trabajador i en el día j.
+        \item Función de evaluación: esta función es la misma definida en la sección anterior.
+        \item Punto de partida: el día en donde se quiera empezar a planificar. Es decir se le entregará un día entre 1 y W.
+        \item Función miope: para el día i, se le asigna al primer trabajador disponible el turno requerido, de tal 
+		forma que la diferencia entre la cantidad de empleados necesarios en dicho turno se minimize.
+\end{itemize}
+}
+
+\frame{
+\frametitle{Representación}
+}
+
+\frame{
+\frametitle{Hill Climbing}
+\begin{itemize}
+        \item Representación: idem.
+        \item Número de restart: definido como
+        \item Solución inicial: solución obtenida mediante greedy.
+        \item Función objetivo: la función objetivo corresponde a minimizar la cantidad de penalizaciones hechas 
+		debido a restricciones blandas insatisfechas.
+\end{itemize}
+}
+
+\frame{
+\begin{itemize}
+        \item Movimiento: swaps de turnos entre turnos de un día. Por ejemplo:
+                \begin{center}
+                	\begin{tabular}{|l|l|l|l|}
+                 	       \hline
+                 	       Lu & Ma & Mi & Ju \\
+                 	       \hline
+                 	       A & A & D & - \\
+                 	       \hline
+                  	      D & D & N & N \\
+                  	      \hline
+                   	     - & - & A & N \\
+                        	\hline
+                	\end{tabular}
+                \end{center}
+
+                Al aplicar el movimiento y generar el primer vecino, se hace un swap de la casilla 1,1, 
+		con la casilla 2,1, quedando:
+                \begin{center}
+			\begin{tabular}{|l|l|l|l|}
+           	             \hline
+           	             Lu & Ma & Mi & Ju \\
+           	             \hline
+           	             D & A & D & - \\
+           	             \hline
+           	             A & D & N & N \\
+           	             \hline
+           	             - & - & A & N \\
+           	             \hline
+			\end{tabular}
+                \end{center}
+\end{itemize}
+}
+
