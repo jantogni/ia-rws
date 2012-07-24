@@ -1,5 +1,5 @@
 \frame{
-\frametitle{Representación}
+\frametitle{Representación para ambos algoritmos}
 Considerando $w=4$ y $n=3$:
 \begin{center}
 	\begin{tabular}{|l|l|l|l|}
@@ -31,8 +31,6 @@ Para calcular efecto de comprobación de restricciones se representó de la sigu
 \frametitle{Greedy}
 Para poder definir un algoritmo Greedy correctamente es necesario especificar:
 \begin{itemize}
-        \item Representación: una matriz de dimensión $NxW$ elementos, donde cada elemento i,j corresponde a la 
-		asignación de un turno al trabajador i en el día j.
         \item Función de evaluación: esta función es la misma definida en la sección anterior.
         \item Punto de partida: el día en donde se quiera empezar a planificar. Es decir se le entregará un día entre 1 y W.
         \item Función miope: para el día i, se le asigna al primer trabajador disponible el turno requerido, de tal 
@@ -43,8 +41,7 @@ Para poder definir un algoritmo Greedy correctamente es necesario especificar:
 \frame{
 \frametitle{Hill Climbing}
 \begin{itemize}
-        \item Representación: idem.
-        \item Número de restart: definido como
+        \item Número de restart: definido como constante (se cambiaba por cada instancia).
         \item Solución inicial: solución obtenida mediante greedy.
         \item Función objetivo: la función objetivo corresponde a minimizar la cantidad de penalizaciones hechas 
 		debido a restricciones blandas insatisfechas.
@@ -88,4 +85,20 @@ Para poder definir un algoritmo Greedy correctamente es necesario especificar:
 
 \frame{
 \frametitle{Greedy + HC}
+\begin{itemize}
+        \item Se inicializa una solución vacía.
+        \item Se le pasas esa solución vacía al greedy, y además un día de comienzo. El resultado de esta operación genera 
+		una solución que respeta las restricciones duras ($R$).
+        \item La solución vacía es la entrada ahora para el hill climbing.
+        \item Se realiza el movimiento sobre la solución actual: si se está trabajando con la función mejor mejora, 
+		se busca en todo el vecindario el mejor vecino, y este es el que pasa a la siguiente etapa. 
+		Si se está trabajando con la función alguna mejora, se busca al primer vecino que mejore la solución y este 
+		es el que pasa a la siguiente etapa. Cuando se habla de mejorar la solución, se habla de la solución que 
+		rompa menos restricciones.
+        \item Si el algoritmo no encuentra un mejor vecino, entonces se hace un restart. Este restart se hizo de dos 
+		formas, la primera se tomó en consideración hacer de nuevo el greedy partiendo de otro día, o también se 
+		hizo swaps entre planificación completa de empleados (cambiar una fila por otra). Ambas como cierta medida 
+		de exploración.
+        \item Cuando se termina la cantidad de restart, el algoritmo acaba y entrega la mejor solución encontrada.
+\end{itemize}
 }
