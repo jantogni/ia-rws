@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2012.4.2)  24 JUL 2012 15:09
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2012.4.2)  24 JUL 2012 15:34
 entering extended mode
  %&-line parsing enabled.
 **presentacion.tex
@@ -1040,15 +1040,12 @@ File: umsb.fd 2002/01/19 v2.2g AMS font definitions
 
 ] [11
 
-]
-Overfull \vbox (88.39497pt too high) detected at line 104
- []
-
-[12
+] [12
 
 ]) (./src/resultados.tex [13
 
-]) (./src/conclusiones.tex [14
+])
+(./src/conclusiones.tex [14
 
 ])
 \tf@nav=\write5
@@ -1060,8 +1057,7 @@ Overfull \vbox (88.39497pt too high) detected at line 104
 \tf@snm=\write7
 \openout7 = `presentacion.snm'.
 
-
-(bin/presentacion.aux)
+ (bin/presentacion.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
@@ -1081,7 +1077,7 @@ ype1/bluesky/cm/cmss10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmss12.pfb>
 1/bluesky/cm/cmssbx10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmssi10.pfb>
 </usr/share/texmf/fonts/type1/bluesky/cm/cmssi8.pfb></usr/share/texmf/fonts/typ
 e1/bluesky/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsy8.pfb>
-Output written on bin/presentacion.pdf (14 pages, 153091 bytes).
+Output written on bin/presentacion.pdf (14 pages, 152631 bytes).
 PDF statistics:
  562 PDF objects out of 1000 (max. 8388607)
  36 named destinations out of 1000 (max. 131072)

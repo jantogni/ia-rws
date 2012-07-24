@@ -89,16 +89,9 @@ Para poder definir un algoritmo Greedy correctamente es necesario especificar:
         \item Se inicializa una solución vacía.
         \item Se le pasas esa solución vacía al greedy, y además un día de comienzo. El resultado de esta operación genera 
 		una solución que respeta las restricciones duras ($R$).
-        \item La solución vacía es la entrada ahora para el hill climbing.
-        \item Se realiza el movimiento sobre la solución actual: si se está trabajando con la función mejor mejora, 
-		se busca en todo el vecindario el mejor vecino, y este es el que pasa a la siguiente etapa. 
-		Si se está trabajando con la función alguna mejora, se busca al primer vecino que mejore la solución y este 
-		es el que pasa a la siguiente etapa. Cuando se habla de mejorar la solución, se habla de la solución que 
-		rompa menos restricciones.
-        \item Si el algoritmo no encuentra un mejor vecino, entonces se hace un restart. Este restart se hizo de dos 
-		formas, la primera se tomó en consideración hacer de nuevo el greedy partiendo de otro día, o también se 
-		hizo swaps entre planificación completa de empleados (cambiar una fila por otra). Ambas como cierta medida 
-		de exploración.
+        \item La solución del greedy es la entrada ahora para el hill climbing.
+        \item Se realiza el movimiento sobre la solución actual.
+        \item Si el algoritmo no encuentra un mejor vecino, entonces se hace un restart.
         \item Cuando se termina la cantidad de restart, el algoritmo acaba y entrega la mejor solución encontrada.
 \end{itemize}
 }
