@@ -6,7 +6,9 @@ FLAGS=-output-directory $(BIN)
 
 DEPENDENCIES=$(NAME).tex
 
-all:
+all: compile clean
+
+compile:
 	@mkdir -p bin
 	@pdflatex $(FLAGS) $(NAME).tex
 	@pdflatex $(FLAGS) $(NAME).tex
