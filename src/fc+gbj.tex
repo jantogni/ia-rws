@@ -1,9 +1,43 @@
 \frame
 {
-\frametitle{Foward Checking}
-}
+\frametitle{Representación}
+Para implementar el algoritmo se crea el arreglo $solucion$ largo $w \times n$.\\
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline  0& 1 & 2&3&4&5&6&...  \\ 
+\hline 
+\end{tabular} 
+\end{center}
+\end{table}
 
+Para una mejor comprensión se puede ver el arreglo como matriz, en donde las filas son los empleados y los dias las columnas, los valores al interior son a los índices correspondientes al arreglo $solucion$, y en el orden en que son instanciados.
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline  0& 6 & 12  \\ 
+\hline  1& 7& 13 \\ 
+\hline  2& 8 & 14  \\ 
+\hline  3&9 & 15\\ 
+\hline  4& 10 & 16  \\ 
+\hline  5& 11& 17  \\ 
+\hline 
+\end{tabular} 
+\end{center}
+\end{table}
+}
 \frame
 {
-\frametitle{Graph BackJumping}
+\frametitle{Foward Checking}
+Funciones mfc:\\
+Se verifican las restricciones y se eliminan los dominios futuros incompatibles.
+Funciones restricción gbj;\\
+Se verifican las restricciones, en caso de no cumplirse se devuelve la cantidad de nodos que se debe devolver.\\
+Gbj:\\
+Item a grandes rasgos los pasos realizados son:
+\begin{itemize}
+\item Realiza la asignación del dominio
+\item 
+\end{itemize}
+
 }
