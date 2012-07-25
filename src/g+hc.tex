@@ -15,7 +15,7 @@ Considerando $w=4$ y $n=3$:
 	\end{tabular}
 \end{center}
 
-Para calcular efecto de comprobación de restricciones se representó de la siguiente forma:
+Para comprobación de restricciones, se representó de la siguiente forma:
 \begin{center}
 	\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|}
 	        \hline
@@ -31,8 +31,9 @@ Para calcular efecto de comprobación de restricciones se representó de la sigu
 \frametitle{Greedy}
 Para poder definir un algoritmo Greedy correctamente es necesario especificar:
 \begin{itemize}
-        \item Función de evaluación: esta función es la misma definida en la sección anterior.
-        \item Punto de partida: el día en donde se quiera empezar a planificar. Es decir se le entregará un día entre 1 y W.
+        \item Solución inicial: solución obtenida mediante greedy.
+        \item Función objetivo: minimizar la cantidad de penalizaciones hechas debido a restricciones blandas insatisfechas.
+        \item Punto de partida: el día en donde se quiera empezar a planificar, es decir, se le entregará un día entre 1 y W.
         \item Función miope: para el día i, se le asigna al primer trabajador disponible el turno requerido, de tal 
 		forma que la diferencia entre la cantidad de empleados necesarios en dicho turno se minimize.
 \end{itemize}
@@ -43,8 +44,7 @@ Para poder definir un algoritmo Greedy correctamente es necesario especificar:
 \begin{itemize}
         \item Número de restart: definido como constante (se cambiaba por cada instancia).
         \item Solución inicial: solución obtenida mediante greedy.
-        \item Función objetivo: la función objetivo corresponde a minimizar la cantidad de penalizaciones hechas 
-		debido a restricciones blandas insatisfechas.
+        \item Función objetivo: minimizar la cantidad de penalizaciones hechas debido a restricciones blandas insatisfechas.
 \end{itemize}
 }
 
@@ -87,7 +87,7 @@ Para poder definir un algoritmo Greedy correctamente es necesario especificar:
 \frametitle{Greedy + HC}
 \begin{itemize}
         \item Se inicializa una solución vacía.
-        \item Se le pasas esa solución vacía al greedy, y además un día de comienzo. El resultado de esta operación genera 
+        \item Se pasa la solución vacía al greedy, y además un día de comienzo. El resultado de esta operación genera 
 		una solución que respeta las restricciones duras ($R$).
         \item La solución del greedy es la entrada ahora para el hill climbing.
         \item Se realiza el movimiento sobre la solución actual.
