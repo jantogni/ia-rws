@@ -28,16 +28,27 @@ Para una mejor comprensión se puede ver el arreglo como matriz, en donde las fi
 }
 \frame
 {
-\frametitle{Foward Checking}
-Funciones mfc:\\
-Se verifican las restricciones y se eliminan los dominios futuros incompatibles.
-Funciones restricción gbj;\\
-Se verifican las restricciones, en caso de no cumplirse se devuelve la cantidad de nodos que se debe devolver.\\
-Gbj:\\
+\frametitle{MFC y GBJ}
+Funciones $MFC$:\\
+Se verifican las restricciones,basta encontrar basta encontrar un camino factible, se eliminan los dominios futuros incompatibles.\\ \vspace{14 pt}
+Funciones restricción para el $GBJ$:\\
+Se verifican las restricciones, en caso de no cumplirse se retorna 1 para realizar el salto al nodo más recientemente instanciado y conectado, este se encuentra en la lista padres de cada nodo.\\
+
+}
+
+\frame{
+\frametitle{MFC+GBJ}
+
 Item a grandes rasgos los pasos realizados son:
-\begin{itemize}
-\item Realiza la asignación del dominio
-\item 
-\end{itemize}
+\begin{enumerate}
+\item Se guardan los padres de cada nodo, en una lista.
+\item Realiza la asignación del dominio.
+\item Realiza función $MFC$ para filtrar dominios.
+\item Realiza función $consistente$ que realiza los chequeos de restricciones para el GBJ.
+\item Analiza si debe realizar un salto, si es así es al mayor valor correspondiente a la lista padre del nodo actual.
+\item De ser así realiza el salto y se reestablecen los dominios y la solución.
+\item Si no se vuelve al punto 2, hasta llegar a la solución final.
+
+\end{enumerate}
 
 }
